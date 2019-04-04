@@ -370,7 +370,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     fill: #fff;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
     .site-header {
         padding-right: 0;
         padding-left: 0;
@@ -2307,8 +2307,3 @@ Usage (In Ghost editor):
 
 /* 12. Global nav
 /* ---------------------------------------------------------- */
-.sign-up-filler {
-    background-color: transparent;
-    width: 108px;
-    height: 38px;
-}
