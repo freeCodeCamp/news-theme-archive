@@ -182,7 +182,7 @@ body {
     width: 100%;
 }
 
-.site-nav-left {
+.site-nav-middle {
     display: flex;
     align-items: center;
     overflow-x: auto;
@@ -196,9 +196,13 @@ body {
     -ms-overflow-scrolling: touch;
 }
 
+.site-nav-left {
+    display: none;
+}
+
 /* Site Nav Hack Explanation (above):
 
-What's happening above it .site-nav-left is set to overflow-x and allow sideways scrolling, so that when there isn't enough space for all nav items (either due to lots of nav items, or a small viewport), you can still scroll side-to-side to reach them.
+What's happening above it .site-nav-middle is set to overflow-x and allow sideways scrolling, so that when there isn't enough space for all nav items (either due to lots of nav items, or a small viewport), you can still scroll side-to-side to reach them.
 
 The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px of padding-bottom and a 40px fixed height parent (.site-nav) hides that entirely. Slightly hacky code. But nice clean end-result.
 
@@ -360,7 +364,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         padding-right: 0;
         padding-left: 0;
     }
-    .site-nav-left {
+    .site-nav-middle {
         margin-right: 0;
     }
     .nav {
@@ -383,6 +387,29 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     .reverse-toggle-color {
         background-color: white;
         color: var(--theme-color);
+    }
+}
+
+@media (min-width: 750px) {
+    .site-nav-middle {
+        flex: 1 0 30%;
+        margin-right: 0px;
+    }
+    .site-nav-left {
+        display: flex;
+        flex: 1 0 30%;
+        margin-left: 0px;
+    }
+    .site-nav-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .site-nav-right {
+        flex: 1 0 30%;
+        margin-left: auto;
+    }
+    .main-nav-group {
+        margin-left: auto;
     }
 }
 
