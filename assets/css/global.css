@@ -302,6 +302,7 @@ body {
 ::selection {
     text-shadow: none;
     background: var(--dark-blue);
+    color: var(--gray00);
 }
 
 hr {
