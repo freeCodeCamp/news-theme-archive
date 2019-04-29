@@ -3,17 +3,6 @@
 
 :root {
     /* Colours */
-    --blue: #3eb0ef;
-    --green: #006400;
-    --purple: #ad26b4;
-    --yellow: #fecd35;
-    --red: #f05230;
-    --darkgrey: #15171a;
-    --midgrey: #738a94;
-    --lightgrey: #c5d2d9;
-    --whitegrey: #e5eff5;
-    --pink: #fa3a57;
-    --brown: #a3821a;
     --dark-blue: #002ead;
     --theme-color: #0a0a2e;
     --gray90: #0a0a2e;
@@ -312,7 +301,7 @@ body {
 
 ::selection {
     text-shadow: none;
-    background: color(var(--blue) lightness(+30%));
+    background: var(--dark-blue);
 }
 
 hr {
@@ -323,7 +312,7 @@ hr {
     padding: 0;
     height: 1px;
     border: 0;
-    border-top: 1px solid color(var(--lightgrey) l(+10%));
+    border-top: 1px solid var(--lightgrey);
 }
 
 audio,
@@ -389,7 +378,7 @@ dt {
     float: left;
     margin: 0 20px 0 0;
     width: 120px;
-    color: var(--darkgrey);
+    color: var(--gray90);
     font-weight: 500;
     text-align: right;
 }
@@ -402,7 +391,7 @@ dd {
 blockquote {
     margin: 1.5em 0;
     padding: 0 1.6em 0 1.6em;
-    border-left: var(--whitegrey) 0.5em solid;
+    border-left: var(--gray10) 0.5em solid;
 }
 
 blockquote p {
