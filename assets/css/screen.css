@@ -277,7 +277,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     border: 1px solid #fff;
     outline: none;
     background-color: var(--gray90);
-    border-radius: 3px;
     cursor: pointer;
     margin-right: 5px;
     margin-top: 4px;
@@ -336,7 +335,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     color: #fff;
     font-size: 1.2rem;
     line-height: 1em;
-    border-radius: 10px;
     opacity: 0.8;
 }
 
@@ -595,7 +593,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     letter-spacing: 0.2px;
     white-space: nowrap;
     background: var(--gray85);
-    border-radius: 3px;
     box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px,
         rgba(39, 44, 49, 0.03) 1px 3px 8px;
     opacity: 0;
@@ -1226,7 +1223,6 @@ Usage (In Ghost editor):
     border: var(--gray10) 1px solid;
     text-align: center;
     background: var(--gray10);
-    border-radius: 7px;
 }
 
 .subscribe-form-title {
@@ -1268,7 +1264,6 @@ Usage (In Ghost editor):
     line-height: 1em;
     font-weight: normal;
     user-select: text;
-    border-radius: 5px;
     transition: border-color 0.15s linear;
 
     -webkit-appearance: none;
@@ -1297,7 +1292,6 @@ Usage (In Ghost editor):
         color(var(--dark-blue) lightness(-7%) saturation(-10%)) 90%,
         color(var(--dark-blue) lightness(-4%) saturation(-10%))
     );
-    border-radius: 5px;
     box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
 
     -webkit-font-smoothing: subpixel-antialiased;
@@ -2203,7 +2197,6 @@ Usage (In Ghost editor):
         color(var(--dark-blue) lightness(-7%) saturation(-10%)) 90%,
         color(var(--dark-blue) lightness(-4%) saturation(-10%))
     );
-    border-radius: 8px;
     box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
 
     -webkit-font-smoothing: subpixel-antialiased;
