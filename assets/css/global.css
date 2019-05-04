@@ -4,14 +4,14 @@
 :root {
     /* Colours */
     --dark-blue: #002ead;
-    --theme-color: #0a0a2e;
-    --gray90: #0a0a2e;
-    --gray85: #1e2040;
-    --gray80: #292948;
-    --gray75: #43435d;
-    --gray15: #d4d4da;
-    --gray10: #e8e8eb;
-    --gray05: #f5f6f7;
+    --theme-color: #0a0a23;
+    --gray90: #0a0a23;
+    --gray85: #1b1b32;
+    --gray80: #2a2a40;
+    --gray75: #3b3b4f;
+    --gray15: #d0d0d5;
+    --gray10: #dfdfe2;
+    --gray05: #eeeef0;
     --gray00: #fff;
     --header-height: 38px;
 }
