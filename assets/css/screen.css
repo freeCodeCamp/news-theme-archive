@@ -108,11 +108,6 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-/*.site-header a {
-    font-size: 18px;
-    font-weight: 400;
-}*/
-
 .site-header.no-image:before,
 .site-header.no-image:after {
     display: none;
@@ -1646,7 +1641,6 @@ Usage (In Ghost editor):
     color: var(--gray85);
     font-weight: 500;
     font-size: 18px;
-    vertical-align: top;
     transition: opacity 0.3s ease;
 }
 
@@ -1980,7 +1974,7 @@ Usage (In Ghost editor):
     margin: 0 0 20px 0;
     width: 100px;
     height: 100px;
-    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
+    box-shadow: 0 0 0 6px var(--gray75);
 }
 
 .under-header-content .author-bio {
