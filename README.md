@@ -5,7 +5,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/freecodecamp/freecodecamp/badge.svg)](https://snyk.io/test/github/freecodecamp/freecodecamp[)
 [![Open Source Helpers](https://www.codetriage.com/freecodecamp/freecodecamp/badges/users.svg)](https://www.codetriage.com/freecodecamp/freecodecamp)
 
-# news-theme
+# news-themes
 
 The [Ghost](http://github.com/tryghost/ghost/) for [freeCodeCamp.org News](https://www.freecodecamp.org/news).
 
