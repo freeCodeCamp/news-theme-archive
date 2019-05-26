@@ -1291,7 +1291,8 @@ Usage (In Ghost editor):
 /* 7.2. Post Footer
 /* ---------------------------------------------------------- */
 
-.post-full-footer {
+.post-full-footer,
+.post-full-author-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
