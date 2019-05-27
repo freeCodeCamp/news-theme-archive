@@ -1297,8 +1297,15 @@ Usage (In Ghost editor):
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 3vw 0 6vw 0;
     max-width: 840px;
+}
+
+.post-full-footer {
+    padding: 3vw 0 6vw 0;
+}
+
+.post-full-author-header {
+    padding: 0 0 3vw 0;
 }
 
 /* 7.2.1 Single Author Byline
