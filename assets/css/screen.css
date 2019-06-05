@@ -456,6 +456,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-tags a {
+    display: block;
     margin-bottom: 1.3rem;
     color: var(--gray75);
     font-size: 1.2rem;
@@ -463,7 +464,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    padding-right: 15px;
 }
 
 .post-card-title {
@@ -2358,7 +2358,8 @@ Usage (In Ghost editor):
 /* 12. jumbotron
 /* ---------------------------------------------------------- */
 .jumbotron {
-    background: var(--gray90);
+    /* background: var(--gray90); */
+    background: red;
 }
 
 .jumbotron a {
