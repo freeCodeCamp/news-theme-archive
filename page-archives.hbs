@@ -53,9 +53,27 @@ into the {body} of the default.hbs template --}}
 
 <script>
 
+    /* const api = new GhostContentAPI({
+         url: 'https://localhost:2368',
+         key: 'bdf4bdfbfa603dfe9e791adcb7',
+         version: 'v2'
+     });
+ 
+     // fetch 5 posts, including related tags and authors
+     api.posts
+         .browse({ limit: 5, include: 'tags,authors' })
+         .then((posts) => {
+             posts.forEach((post) => {
+                 console.log(post.title);
+             });
+         })
+         .catch((err) => {
+             console.error(err);
+         });*/
+
     const api = new GhostContentAPI({
-        url: 'http://localhost:2368',
-        key: 'bdf4bdfbfa603dfe9e791adcb7',
+        url: 'https://demo.ghost.io',
+        key: '22444f78447824223cefc48062',
         version: 'v2'
     });
 
