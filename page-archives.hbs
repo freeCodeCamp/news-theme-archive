@@ -5,50 +5,54 @@ into the {body} of the default.hbs template --}}
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
-{{#post}}
-
 <main id="site-main" class="site-main outer">
     <div class="inner">
+        <div class="post-feed">
+            {{!-- <div class="post-card jumbotron">
+                <h1>Welcome to freeCodeCamp News.</h1>
+                <h2>This is a free, open source, no-ads place to cross-post your blog articles. Read about it
+                    <a href="https://www.freecodecamp.org/forum/t/279929">here</a>.</h2>
+            </div> --}}
 
-        <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
-
-            <header class="post-full-header">
-                <h1 class="post-full-title">{{title}}</h1>
-            </header>
-
-            {{#if feature_image}}
-            <figure class="post-full-image">
-                {{!-- This is a responsive image, it loads different sizes depending on device
-                https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-                <img srcset="{{img_url feature_image size="s"}} 300w,
-                            {{img_url feature_image size="m"}} 600w,
-                            {{img_url feature_image size="l"}} 1000w,
-                            {{img_url feature_image size="xl"}} 2000w" sizes="(max-width: 800px) 400px,
-                            (max-width: 1170px) 700px,
-                            1400px" src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
-            </figure>
-            {{/if}}
-
-            <section class="post-full-content">
-                <div class="post-content">
-                    {{content}}
-                    <div id="postLoading">
-                        <h3>Loading post archive...</h3>
-                    </div>
-                    <div id="postList"></div>
-                </div>
-            </section>
-
-        </article>
-
+            {{#foreach posts}}
+            {{> "post-card"}}
+            {{/foreach}}
+        </div>
     </div>
 </main>
 
-{{/post}}
-
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
-<script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js"></script>
+<script src="https://unpkg.com/@tryghost/content-api@1.2.4/umd/content-api.min.js"></script>
+<script>
+    const api = new GhostContentAPI({
+        url: 'http://localhost:2368',
+        key: 'bdf4bdfbfa603dfe9e791adcb7',
+        version: 'v2'
+    });
+
+    /*var today = new Date();
+
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //As January is 0.
+    var yyyy = today.getFullYear();
+
+    let largeDate = { year: 2019, month: 7, day: 3 }
+
+    let smallDate = { year: 2019, month: 7, day: 3 }*/
+
+    // fetch 5 posts, including related tags and authors
+    api.posts
+        .browse({ filter: `published_at:>'2019-07-22'+ published_at:<'2019-07-20'`, limit: 15 })
+        .then((posts) => {
+            posts.forEach((post) => {
+                console.log(post.title);
+            });
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+</script>
 
 
 <script>
@@ -58,37 +62,7 @@ into the {body} of the default.hbs template --}}
          key: 'bdf4bdfbfa603dfe9e791adcb7',
          version: 'v2'
      });
- 
-     // fetch 5 posts, including related tags and authors
-     api.posts
-         .browse({ limit: 5, include: 'tags,authors' })
-         .then((posts) => {
-             posts.forEach((post) => {
-                 console.log(post.title);
-             });
-         })
-         .catch((err) => {
-             console.error(err);
-         });*/
-
-    const api = new GhostContentAPI({
-        url: 'https://demo.ghost.io',
-        key: '22444f78447824223cefc48062',
-        version: 'v2'
-    });
-
-    // fetch 5 posts, including related tags and authors
-    api.posts
-        .browse({ limit: 5, include: 'tags,authors' })
-        .then((posts) => {
-            posts.forEach((post) => {
-                console.log(post.title);
-            });
-        })
-        .catch((err) => {
-            console.error(err);
-        });
-
+ */
 
     $(function () {
         var $postContent = $(".post-full-content");
