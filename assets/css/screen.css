@@ -2385,7 +2385,7 @@ Usage (In Ghost editor):
 
 #discourse-comments {
     border: 1px solid #eeeef0;
-    padding: 5vw 7vw 5vw;
+    padding: 5vw 7vw;
 }
 
 #discourse-comments footer {
