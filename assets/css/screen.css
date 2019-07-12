@@ -730,12 +730,12 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-full-header {
     margin: 0 auto;
-    padding: 6vw 3vw 3vw;
+    padding: 0vw 0vw 3vw;
     max-width: 1040px;
 }
 @media (max-width: 500px) {
     .post-full-header {
-        padding: 14vw 3vw 10vw;
+        padding: 0vw 0 8vw;
     }
 }
 
@@ -802,9 +802,6 @@ make sure this only happens on large viewports / desktop-ish devices.
 @media (max-width: 800px) {
     .post-full-content {
         font-size: 1.9rem;
-    }
-    .post-full-meta {
-        padding-bottom: 5vw;
     }
 }
 
@@ -1307,8 +1304,6 @@ Usage (In Ghost editor):
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 3vw;
-    padding: 0 0 3vw 0;
 }
 
 .post-full-footer {
