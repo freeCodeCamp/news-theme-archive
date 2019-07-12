@@ -1758,8 +1758,8 @@ Usage (In Ghost editor):
     z-index: 10;
     flex-shrink: 0;
     margin: 0 0 20px 0;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     box-shadow: 0 0 0 6px var(--gray75);
 }
 
