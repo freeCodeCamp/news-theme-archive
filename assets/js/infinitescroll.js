@@ -35,6 +35,9 @@
             document
                 .getElementById("readMoreBtn")
                 .removeEventListener("click", onUpdate);
+            document
+                .getElementById("readMoreBtn")
+                .remove();
         }
 
         // sync status
