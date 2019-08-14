@@ -6,7 +6,12 @@
     // next link element
 
     var nextElement = document.querySelector("link[rel=next]");
-    if (!nextElement) return;
+    if (!nextElement){
+        document
+            .getElementById("readMoreBtn")
+            .remove();
+        return;
+    } 
 
     // post feed element
     var feedElement = document.querySelector(".post-feed");
