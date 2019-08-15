@@ -4,14 +4,11 @@
 
 (function(window, document) {
     // next link element
-
     var nextElement = document.querySelector("link[rel=next]");
-    if (!nextElement){
-        document
-            .getElementById("readMoreBtn")
-            .remove();
+    if (!nextElement) {
+        document.querySelector(".read-more-row").remove();
         return;
-    } 
+    }
 
     // post feed element
     var feedElement = document.querySelector(".post-feed");
@@ -40,9 +37,7 @@
             document
                 .getElementById("readMoreBtn")
                 .removeEventListener("click", onUpdate);
-            document
-                .getElementById("readMoreBtn")
-                .remove();
+            document.querySelector(".read-more-row").remove();
         }
 
         // sync status
