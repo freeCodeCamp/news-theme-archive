@@ -20,3 +20,5 @@ You can report bugs and request features on [freeCodeCamp.org's main repository]
 ## Copyright & License
 
 Copyright (c) 2019 freeCodeCamp.org - Released under the [MIT license](LICENSE.md).
+
+Keep learning and keep exploring.
