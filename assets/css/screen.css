@@ -187,7 +187,6 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 80px;
     letter-spacing: 0.4px;
     white-space: nowrap;
     margin-left: 0;
@@ -970,6 +969,7 @@ Usage (In Ghost editor):
 
 .post-full-content hr {
     margin: 4vw 0;
+    border-top: 1px solid var(--gray15);
 }
 
 .post-full-content hr:after {
@@ -1321,6 +1321,7 @@ Usage (In Ghost editor):
 
 .author-card {
     display: flex;
+    padding-bottom: 20px;
 }
 
 .author-card .author-profile-image,
