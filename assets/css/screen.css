@@ -2272,8 +2272,16 @@ p.footer-donation {
     text-decoration: none;
 }
 
-/* 14. donation-row
+/* 14. donation-row and social-row
 /* ---------------------------------------------------------- */
+
+.social-row {
+    margin: 2em 0 0 0;
+}
+
+.donation-row h4 {
+    margin: 0 0 1.5em 0;
+}
 
 a.donation-cta {
     display: flex;
