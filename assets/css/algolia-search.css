@@ -205,7 +205,8 @@ a:active {
         left: 15px;
     }
     .ais-SearchBox-submit {
-        left: 3rem;
+        /* 30px = 10px of nav padding + 15px of form padding + 5px of additional padding */
+        left: 30px;
         top: 20%;
     }
 }
