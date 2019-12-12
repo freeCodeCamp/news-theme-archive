@@ -2298,7 +2298,7 @@ a.cta-button {
     min-height: 40px;
     text-align: center;
     text-decoration: none;
-    vertical-align: middle;
+    display: inline-block;
     outline: none;
     justify-content: center;
     align-items: center;
