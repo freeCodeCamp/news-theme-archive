@@ -40,7 +40,7 @@
           if (!query.isEmpty) {
             return `
               <hr/>
-              <a id="algolia-footer-selector" href="https://freecodecamp.org/news/search?query=${result.query}">
+              <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search/?query=${result.query}">
                 <div class="algolia-result algolia-footer">
                   <span>See all results for ${result.query}</span>
                 </div>
@@ -73,7 +73,7 @@
 
   input.addEventListener('keydown', e => {
     if (event.key === 'Enter' && !hitSelected && searchQuery) {
-      window.location.assign(`https://freecodecamp.org/news/search?query=${searchQuery}`);
+      window.location.assign(`https://www.freecodecamp.org/news/search/?query=${searchQuery}`);
     }
   });
 
@@ -88,7 +88,7 @@
       const articleUrl = hitSelected.querySelector('a').href;
       window.location.assign(articleUrl);
     } else if (!hitSelected && searchQuery) {
-      window.location.assign(`https://freecodecamp.org/news/search?query=${searchQuery}`);
+      window.location.assign(`https://www.freecodecamp.org/news/search/?query=${searchQuery}`);
     }
   }
 </script>
