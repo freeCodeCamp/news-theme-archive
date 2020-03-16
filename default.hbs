@@ -32,6 +32,9 @@
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
+    {{!-- Stripe scripts for Checkout --}}
+    <script src="https://js.stripe.com/v3"></script>
+
 </head>
 
 <body class="{{body_class}}">
@@ -39,12 +42,35 @@
     <div class="site-wrapper">
         {{> "site-nav"}}
 
+        {{!-- Donation Banner and Stripe Checkout --}}
         <div class="under-header-content jumbotron">
             <h2 class="donation-banner">
                 Stay safe, friends. Learn from home. And help our nonprofit pay for server costs. <a
-                    href="https://www.freecodecamp.org/donate/">Donate here.</a>
+                    href="#" id="checkout-link-sku_GvCnSmqAJ5bJKH">Donate here.</a>
             </h2>
         </div>
+
+        <div id="error-message"></div>
+
+        <script>
+        (function() {
+        var stripe = Stripe('pk_live_E6Z6xPM8pEsJziHW905zpAvF');
+        var checkoutButton = document.getElementById('checkout-link-sku_GvCnSmqAJ5bJKH');
+        checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+            items: [{sku: 'sku_GvCnSmqAJ5bJKH', quantity: 1}],
+            successUrl: 'https://www.freecodecamp.org/news/thank-you-for-donating/',
+            cancelUrl: 'https://www.freecodecamp.org/news/',
+            })
+            .then(function (result) {
+            if (result.error) {
+                var displayError = document.getElementById('error-message');
+                displayError.textContent = result.error.message;
+            }
+            });
+        });
+        })();
+        </script>
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}

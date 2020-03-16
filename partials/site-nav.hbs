@@ -16,17 +16,29 @@
             {{/if}}
         </div>
     </div>
-    <button class="site-nav-right toggle-button-nav">
+    <button class="site-nav-right toggle-button-nav" id="checkout-button-sku_GvCnSmqAJ5bJKH">
         Donate
     </button>
 </nav>
 
 {{#contentFor "scripts"}}
 <script>
-    $(document).ready(function () {
-        $(".toggle-button-nav").click(function () {
-            window.location.href = "https://www.freecodecamp.org/donate/";
+    (function () {
+        var stripe = Stripe('pk_live_E6Z6xPM8pEsJziHW905zpAvF');
+        var checkoutButton = document.getElementById('checkout-button-sku_GvCnSmqAJ5bJKH');
+        checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+                items: [{ sku: 'sku_GvCnSmqAJ5bJKH', quantity: 1 }],
+                successUrl: 'https://www.freecodecamp.org/news/thank-you-for-donating/',
+                cancelUrl: 'https://www.freecodecamp.org/news/',
+            })
+                .then(function (result) {
+                    if (result.error) {
+                        var displayError = document.getElementById('error-message');
+                        displayError.textContent = result.error.message;
+                    }
+                });
         });
-    });
+    })();
 </script>
 {{/contentFor}}
