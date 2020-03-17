@@ -52,26 +52,6 @@
 
         <div id="error-message"></div>
 
-        <script>
-        (function() {
-        var stripe = Stripe('pk_live_E6Z6xPM8pEsJziHW905zpAvF');
-        var checkoutButton = document.getElementById('checkout-link-sku_GvCnSmqAJ5bJKH');
-        checkoutButton.addEventListener('click', function () {
-            stripe.redirectToCheckout({
-            items: [{sku: 'sku_GvCnSmqAJ5bJKH', quantity: 1}],
-            successUrl: 'https://www.freecodecamp.org/news/thank-you-for-donating/',
-            cancelUrl: 'https://www.freecodecamp.org/news/',
-            })
-            .then(function (result) {
-            if (result.error) {
-                var displayError = document.getElementById('error-message');
-                displayError.textContent = result.error.message;
-            }
-            });
-        });
-        })();
-        </script>
-
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
