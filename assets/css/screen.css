@@ -173,7 +173,7 @@ body {
     /* overflow-y: auto; */
     height: 40px;
     font-size: 18px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     height: 38px;
     background: var(--theme-color);
     position: fixed;
@@ -199,6 +199,7 @@ body {
     height: 100%;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 /* Site Nav Hack Explanation (above):
@@ -393,8 +394,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         margin-left: 0px;
     }
     .site-nav-logo {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
     .site-nav-right {
         flex: 1 0 35%;
@@ -2441,7 +2441,7 @@ a.cta-button {
     }
 }
 
-/* 15. under-header-content donation 
+/* 15. under-header-content donation
 /* ---------------------------------------------------------- */
 
 .under-header-content.jumbotron {

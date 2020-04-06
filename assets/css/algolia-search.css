@@ -9,11 +9,10 @@
 }
 
 #search-input {
-    width: calc(100vw - 75px);
+    width: 125%;
     color: var(--gray00);
     background: var(--gray75);
     border: none;
-    margin: 6px 0 0 0px;
     padding: 0 10px 0 30px;
     font-size: 18px;
     height: 26px;
@@ -25,20 +24,23 @@
     color: var(--gray15);
 }
 
+[class^="ais-"] {
+    font-size: 1rem;
+}
+
 .ais-SearchBox-submit {
     position: absolute;
-    left: 0.5rem;
-    top: 25.5%;
+    top: 9px;
     width: 20px;
     height: 20px;
     margin: 0;
     border: 0;
-    border-radius: 0;
     background: none;
     padding: 0;
     vertical-align: middle;
     text-align: center;
     font-size: inherit;
+    z-index: 100;
     -webkit-user-select: none;
       -moz-user-select: none;
         -ms-user-select: none;
@@ -192,11 +194,6 @@ a:active {
     .site-nav-left form {
         display: flex;
     }
-    #search-input {
-        width: 30vw;
-        max-width: 500px;
-        display: inherit;
-    }
     .display-search form {
         display: flex;
         position: absolute;
@@ -205,7 +202,6 @@ a:active {
         left: 15px;
     }
     .ais-SearchBox-submit {
-        left: 3rem;
-        top: 20%;
+        left: 30px;
     }
 }
