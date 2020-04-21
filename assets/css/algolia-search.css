@@ -59,11 +59,12 @@
     height: 14px;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     fill: var(--gray15);
 }
 
 .algolia-autocomplete {
+    position: relative;
     width: 100%;
 }
 
@@ -200,12 +201,11 @@ a:active {
     .display-search form {
         display: flex;
         position: absolute;
+        left: 15px;
         top: 0;
         padding: 0px;
-        left: 15px;
     }
     .ais-SearchBox-submit {
-        left: 3rem;
-        top: 20%;
+        left: 30px;
     }
 }
