@@ -79,17 +79,25 @@
 }
 
 .algolia-autocomplete .aa-dropdown-menu {
-  width: 100%;
-  color: var(--gray00);
   background: var(--gray75);
-  border-top: none;
+  color: var(--gray00);
   font-weight: 300;
+  width: 100%;
 }
 
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  border-bottom: 0.75px solid var(--gray15) ;
   cursor: pointer;
-  padding: 3px 3px;
-  border: none;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:first-of-type {
+  border-top: 0.75px solid var(--gray15);
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: none;
 }
 
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
